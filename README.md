@@ -52,8 +52,3 @@ The early-adopter form (`src/components/sections/cta.tsx`) and the support form
 success state. Point their `onSubmit` handlers at your provider (the original site
 used **Formspree** for early access and **Azure Communication Services** for support).
 
-## Content
-
-All copy is sourced from the existing AICAN site. Placeholder emails
-(`hello@ / privacy@ / security@aican.tech`) and the Cyprus/EU company details can be
-swapped for the real obfuscated addresses before launch.
