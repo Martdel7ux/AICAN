@@ -55,7 +55,7 @@ export function Process() {
                   </p>
                 </div>
                 <div className="self-center overflow-x-auto rounded-lg border border-line bg-obsidian px-4 py-3 no-scrollbar">
-                  <code className="whitespace-nowrap font-mono text-[12.5px] text-white/70">
+                  <code className="block break-words font-mono text-[12.5px] leading-relaxed text-white/70 sm:whitespace-nowrap sm:break-normal">
                     <span className="mr-2 select-none text-accent">$</span>
                     {s.cmd}
                   </code>

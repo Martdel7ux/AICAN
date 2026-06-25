@@ -111,8 +111,8 @@ export default function PrivacyPage() {
         </div>
 
         <div className="mt-16 grid gap-14 lg:grid-cols-[260px_1fr] lg:gap-16">
-          {/* TOC */}
-          <aside className="lg:sticky lg:top-28 lg:h-fit">
+          {/* TOC — desktop only (links are hidden below lg) */}
+          <aside className="hidden lg:sticky lg:top-28 lg:block lg:h-fit">
             <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-faint">
               Contents
             </p>

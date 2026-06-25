@@ -41,7 +41,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease, delay: 0.05 }}
-              className="display mt-6 text-[clamp(2.6rem,6vw,4.6rem)]"
+              className="display mt-6 text-[clamp(2.1rem,7.5vw,4.6rem)]"
             >
               Enterprise AI
               <br />
@@ -66,13 +66,16 @@ export function Hero() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease, delay: 0.25 }}
-              className="mt-9 flex flex-wrap items-center gap-3"
+              className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center"
             >
-              <Link href="/#cta" className="btn-primary group">
+              <Link
+                href="/get-started"
+                className="btn-primary group w-full sm:w-auto"
+              >
                 Become an early adopter
                 <ArrowRight className="transition-transform duration-300 group-hover:translate-x-0.5" />
               </Link>
-              <Link href="/#capabilities" className="btn-ghost">
+              <Link href="/features" className="btn-ghost w-full sm:w-auto">
                 Explore capabilities
               </Link>
             </motion.div>
@@ -107,31 +110,37 @@ export function Hero() {
               </div>
 
               {/* body */}
-              <div className="space-y-2.5 p-5 font-mono text-[13px] leading-relaxed">
+              <div className="space-y-2.5 p-4 font-mono text-[12px] leading-relaxed sm:p-5 sm:text-[13px]">
                 {terminalLines.map((line, i) => (
                   <motion.div
                     key={i}
                     initial={{ opacity: 0, x: -6 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.4, ease, delay: 0.7 + i * 0.18 }}
-                    className="flex items-start gap-2"
+                    className="flex min-w-0 items-start gap-2"
                   >
                     {line.type === "cmd" && (
                       <>
                         <span className="select-none text-accent">$</span>
-                        <span className="text-white/80">{line.text}</span>
+                        <span className="min-w-0 break-words text-white/80">
+                          {line.text}
+                        </span>
                       </>
                     )}
                     {line.type === "ok" && (
                       <>
                         <span className="select-none text-emerald-400">✓</span>
-                        <span className="text-white/55">{line.text}</span>
+                        <span className="min-w-0 break-words text-white/55">
+                          {line.text}
+                        </span>
                       </>
                     )}
                     {line.type === "done" && (
-                      <span className="mt-1 flex items-center gap-2 text-accent">
-                        <span className="inline-block h-3.5 w-2 animate-blink bg-accent" />
-                        <span className="text-white/90">{line.text}</span>
+                      <span className="mt-1 flex min-w-0 items-center gap-2 text-accent">
+                        <span className="inline-block h-3.5 w-2 flex-none animate-blink bg-accent" />
+                        <span className="min-w-0 break-words text-white/90">
+                          {line.text}
+                        </span>
                       </span>
                     )}
                   </motion.div>

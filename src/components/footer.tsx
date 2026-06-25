@@ -5,10 +5,10 @@ const columns = [
   {
     title: "Product",
     links: [
-      { label: "Features", href: "/#capabilities" },
-      { label: "How It Works", href: "/#process" },
-      { label: "Showcase", href: "/#showcase" },
-      { label: "Compare", href: "/#comparison" },
+      { label: "Features", href: "/features" },
+      { label: "How It Works", href: "/how-it-works" },
+      { label: "Showcase", href: "/showcase" },
+      { label: "Compare", href: "/compare" },
     ],
   },
   {
@@ -16,7 +16,7 @@ const columns = [
     links: [
       { label: "Blog", href: "/blog" },
       { label: "Support", href: "/support" },
-      { label: "Get Started", href: "/#cta" },
+      { label: "Get Started", href: "/get-started" },
     ],
   },
   {

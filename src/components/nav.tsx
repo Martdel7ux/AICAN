@@ -6,9 +6,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Wordmark } from "./wordmark";
 
 const links = [
-  { label: "Features", href: "/#capabilities" },
-  { label: "How It Works", href: "/#process" },
-  { label: "Showcase", href: "/#showcase" },
+  { label: "Features", href: "/features" },
+  { label: "How It Works", href: "/how-it-works" },
+  { label: "Showcase", href: "/showcase" },
   { label: "Blog", href: "/blog" },
   { label: "Support", href: "/support" },
 ];
@@ -54,7 +54,7 @@ export function Nav() {
           </div>
 
           <div className="hidden md:block">
-            <Link href="/#cta" className="btn-primary !px-5 !py-2.5 !text-[13px]">
+            <Link href="/get-started" className="btn-primary !px-5 !py-2.5 !text-[13px]">
               Get Started
             </Link>
           </div>
@@ -106,7 +106,7 @@ export function Nav() {
                   </Link>
                 ))}
                 <Link
-                  href="/#cta"
+                  href="/get-started"
                   onClick={() => setOpen(false)}
                   className="btn-primary mt-2 w-full"
                 >
