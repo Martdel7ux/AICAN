@@ -44,10 +44,15 @@ const config: Config = {
           "0%": { opacity: "0", transform: "translateY(12px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
+        "pulse-ring": {
+          "0%": { transform: "scale(0.6)", opacity: "0.5" },
+          "100%": { transform: "scale(2.4)", opacity: "0" },
+        },
       },
       animation: {
         blink: "blink 1.1s step-end infinite",
         "fade-up": "fade-up 0.7s cubic-bezier(0.22,1,0.36,1) both",
+        "pulse-ring": "pulse-ring 3s cubic-bezier(0.22,1,0.36,1) infinite",
       },
     },
   },

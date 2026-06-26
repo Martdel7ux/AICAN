@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Reveal } from "@/components/reveal";
-import { ArrowRight } from "@/components/icons";
 
 export function CTABand({
   title = "Ready to ship AI without the plumbing?",
@@ -29,10 +28,9 @@ export function CTABand({
             </p>
             <Link
               href={href}
-              className="group mt-9 inline-flex items-center justify-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-medium text-canvas transition-all duration-300 hover:bg-canvas hover:text-ink"
+              className="mt-9 inline-flex items-center justify-center rounded-full bg-accent px-7 py-3.5 text-sm font-medium text-canvas transition-all duration-300 hover:bg-canvas hover:text-ink"
             >
               {cta}
-              <ArrowRight className="transition-transform duration-300 group-hover:translate-x-0.5" />
             </Link>
           </div>
         </Reveal>

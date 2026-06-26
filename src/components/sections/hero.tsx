@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight } from "@/components/icons";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -37,18 +36,30 @@ export function Hero() {
               Production-ready infrastructure
             </motion.span>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease, delay: 0.05 }}
-              className="display mt-6 text-[clamp(2.1rem,7.5vw,4.6rem)]"
-            >
-              Enterprise AI
-              <br />
-              infrastructure,
-              <br />
-              <span className="italic text-accent">defined as code.</span>
-            </motion.h1>
+            <h1 className="display mt-6 text-[clamp(2.1rem,7.5vw,4.6rem)]">
+              {[
+                <>Enterprise AI</>,
+                <>infrastructure,</>,
+                <span key="accent" className="italic text-accent">
+                  defined as code.
+                </span>,
+              ].map((line, i) => (
+                <span key={i} className="block overflow-hidden pb-[0.06em]">
+                  <motion.span
+                    className="block"
+                    initial={{ y: "110%" }}
+                    animate={{ y: 0 }}
+                    transition={{
+                      duration: 0.85,
+                      ease,
+                      delay: 0.1 + i * 0.12,
+                    }}
+                  >
+                    {line}
+                  </motion.span>
+                </span>
+              ))}
+            </h1>
 
             <motion.p
               initial={{ opacity: 0, y: 18 }}
@@ -70,10 +81,9 @@ export function Hero() {
             >
               <Link
                 href="/get-started"
-                className="btn-primary group w-full sm:w-auto"
+                className="btn-primary w-full sm:w-auto"
               >
                 Become an early adopter
-                <ArrowRight className="transition-transform duration-300 group-hover:translate-x-0.5" />
               </Link>
               <Link href="/features" className="btn-ghost w-full sm:w-auto">
                 Explore capabilities

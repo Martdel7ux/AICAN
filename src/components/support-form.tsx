@@ -2,7 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import Link from "next/link";
-import { ArrowRight, CheckIcon } from "@/components/icons";
+import { CheckIcon } from "@/components/icons";
 
 const categories = [
   "Technical Support",
@@ -113,9 +113,8 @@ export function SupportForm() {
         </p>
       </div>
 
-      <button type="submit" className="btn-primary group mt-5 w-full">
+      <button type="submit" className="btn-primary mt-5 w-full">
         Send message
-        <ArrowRight className="transition-transform duration-300 group-hover:translate-x-0.5" />
       </button>
       <p className="mt-3 text-center text-[12px] text-faint">
         By submitting you agree to our{" "}

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { ArrowRight, CheckIcon } from "@/components/icons";
+import { CheckIcon } from "@/components/icons";
 
 type Tone = "dark" | "light";
 
@@ -10,7 +10,7 @@ const tones = {
     input:
       "w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3.5 text-[15px] text-white placeholder-white/35 outline-none transition-colors focus:border-accent",
     button:
-      "group flex w-full items-center justify-center gap-2 rounded-xl bg-accent px-6 py-3.5 text-sm font-medium text-canvas transition-all duration-300 hover:bg-canvas hover:text-ink",
+      "flex w-full items-center justify-center rounded-xl bg-accent px-6 py-3.5 text-sm font-medium text-canvas transition-all duration-300 hover:bg-canvas hover:text-ink",
     note: "pt-1 text-center font-mono text-[11px] text-white/35",
     successTitle: "font-serif text-2xl font-light text-canvas",
     successBody: "text-[14px] leading-relaxed text-white/55",
@@ -20,7 +20,7 @@ const tones = {
     input:
       "w-full rounded-xl border border-line bg-paper px-4 py-3.5 text-[15px] text-ink placeholder-faint outline-none transition-colors focus:border-accent",
     button:
-      "group flex w-full items-center justify-center gap-2 rounded-xl bg-ink px-6 py-3.5 text-sm font-medium text-canvas transition-all duration-300 hover:bg-accent",
+      "flex w-full items-center justify-center rounded-xl bg-ink px-6 py-3.5 text-sm font-medium text-canvas transition-all duration-300 hover:bg-accent",
     note: "pt-1 text-center font-mono text-[11px] text-faint",
     successTitle: "font-serif text-2xl font-light text-ink",
     successBody: "text-[14px] leading-relaxed text-muted",
@@ -89,7 +89,6 @@ export function EarlyAccessForm({ tone = "light" }: { tone?: Tone }) {
       </div>
       <button type="submit" className={t.button}>
         Request early access
-        <ArrowRight className="transition-transform duration-300 group-hover:translate-x-0.5" />
       </button>
       <p className={t.note}>No spam. We&rsquo;ll only email about onboarding.</p>
     </form>

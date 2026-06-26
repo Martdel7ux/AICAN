@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/page-header";
 import { CTABand } from "@/components/cta-band";
+import { NetworkGraphic } from "@/components/motion/network-graphic";
 import { Reveal, Stagger, StaggerItem } from "@/components/reveal";
 import {
   ShieldIcon,
@@ -143,6 +144,31 @@ export default function FeaturesPage() {
               </StaggerItem>
             ))}
           </Stagger>
+        </div>
+      </section>
+
+      {/* Architecture visual */}
+      <section className="border-t border-line bg-paper py-20 md:py-28">
+        <div className="container-x">
+          <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+            <Reveal className="order-2 lg:order-1">
+              <div className="rounded-3xl border border-line bg-canvas p-6 md:p-10">
+                <NetworkGraphic />
+              </div>
+            </Reveal>
+            <Reveal delay={0.1} className="order-1 lg:order-2">
+              <span className="eyebrow">Topology</span>
+              <h2 className="display mt-6 text-[clamp(2rem,4vw,3rem)]">
+                Centralized control, isolated workloads.
+              </h2>
+              <p className="mt-6 max-w-md text-[15px] leading-relaxed text-muted">
+                Shared security services live in the hub; each workload runs in
+                its own spoke. Traffic flows through controlled, inspected paths
+                over private endpoints — segmentation enforced by the platform,
+                not by convention.
+              </p>
+            </Reveal>
+          </div>
         </div>
       </section>
 

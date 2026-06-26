@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Reveal, Stagger, StaggerItem } from "@/components/reveal";
-import { ArrowRight } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -75,9 +74,8 @@ export default function BlogPage() {
                       </p>
                     </div>
                   </div>
-                  <span className="flex items-center gap-1.5 text-sm text-muted transition-colors group-hover:text-accent">
+                  <span className="text-sm text-muted transition-colors group-hover:text-accent">
                     Read
-                    <ArrowRight className="transition-transform duration-300 group-hover:translate-x-0.5" />
                   </span>
                 </div>
               </Link>
